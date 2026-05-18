@@ -1,4 +1,4 @@
-exer = int(input("digite o numero do exercicio: "))
+exer = 5 #int(input("digite o numero do exercicio: "))
 
 #Exer1
 if (exer == 1):
@@ -25,6 +25,19 @@ elif (exer == 4):
     time = float(input("Digite o tempo de investimento (em anos): "))
     montante = (cap * (1 + taxa)) ** time
     print(f"Com o capital incial de R${cap:.2f} e a taxa de anual de {taxa}%. \n Em {time} anos o investimento final será de R${montante:.2f}")
-
+#Exer 5 Escreva um programa que calcule o tempo (em horas, minutos e segundos) necessário para 
+    # baixar um arquivo, dado o tamanho do arquivo (em MB) e a velocidade da conexão (em MB/s).
+elif (exer == 5):
+    speed = 1#float(input("Digite a velocidade da conexão (em MB/s): "))
+    size = float(input("Digite o tamanho do arquivo (em MB): "))
+    result = round(size/speed, 0)
+    if result < 60:
+        print(f"Levou {result:.0f} segundo(s).")
+    elif result < 3600:
+        result = round(result / 60, 0)
+        print(f"Levou {result:.0f} minuto(s).")
+    else:
+        result = (round(result / 60, 0))/60
+        print(f"Levou {result:.0f} hora(s).")
 else: #FIM DO CODIGO
     print("Não tem esse exercicio")

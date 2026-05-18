@@ -53,7 +53,6 @@ elif (exer == 4):
         juros = int(input("Digite a porcentagem dos juros: "))
         resultado = (valor_base+(valor_base * (juros/100)))/parcelas
         print(f"O valor de R${valor_base:.2f} será parcelado em {parcelas} com juros de {juros}% resultando em {parcelas}x de R${resultado:.2f} cada.")
-
 #Exer 5
 elif (exer == 5):
     print("!!! TABUADA !!!")
@@ -75,12 +74,15 @@ elif (exer == 6):
     print(f"A avaliação do estabelecimento é {nota:.1f}")
 #Exer 7
 elif (exer == 7):
-    q_num = []
-    i = 0
+    i = 1
+    high_num = 0
     while i <= 25:
-        q_num.append(random.randint(1, 100))
-        print(q_num)
+        random_num = random.randint(1, 100)
+        print(f"{i}° numero gerado: {random_num}")
         i += 1
-        #liste 25 numero e faça ele dizer qual o maior
+        if random_num > high_num:
+            high_num = random_num
+    
+    print(f"O maior numero aleatorio gerado foi {high_num}.")
 else: #FIM DO CODIGO
     print("Não tem esse exercicio")
