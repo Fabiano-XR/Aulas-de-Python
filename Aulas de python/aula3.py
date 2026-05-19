@@ -82,7 +82,16 @@ elif (exer == 7):
         i += 1
         if random_num > high_num:
             high_num = random_num
-    
     print(f"O maior numero aleatorio gerado foi {high_num}.")
+#Exer 8
+elif (exer == 8):
+    i = 1
+    nota = 0
+    alunos = int(input("Digite a quantidade de alunos: "))
+    while i <= alunos:
+        nota += float(input(f"Digite a nota do {i}° aluno: "))
+        i += 1
+    media = nota/alunos
+    print(f"A nota media da sala de {alunos} alunos é {media:.1f}.")
 else: #FIM DO CODIGO
     print("Não tem esse exercicio")

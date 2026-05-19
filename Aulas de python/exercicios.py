@@ -34,10 +34,11 @@ elif (exer == 5):
     if result < 60:
         print(f"Levou {result:.0f} segundo(s).")
     elif result < 3600:
-        result = round(result / 60, 0)
-        print(f"Levou {result:.0f} minuto(s).")
+        print(f"Levou {round(result/60, 0)} minuto(s) e {result} segundos.")
+        #print(f"Levou {result:.0f} minuto(s).")
     else:
-        result = (round(result / 60, 0))/60
-        print(f"Levou {result:.0f} hora(s).")
+        print(f"Levou {round((result/60)/60, 0)} hora(s){round(result/60, 0)} minuto(s) e {result} segundos.")
+        #print(f"Levou {result:.0f} hora(s).")
 else: #FIM DO CODIGO
     print("Não tem esse exercicio")
+    valor_final = valor+(valor*0.1)
