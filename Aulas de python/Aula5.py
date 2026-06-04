@@ -1,4 +1,4 @@
-exer = 6#int(input("digite o numero do exercicio: "))
+exer = int(input("digite o numero do exercicio: "))
 
 #Exer 1
 if (exer == 1):
@@ -9,8 +9,7 @@ if (exer == 1):
 #Exer 2
 elif (exer == 2):
     lista = ["Pá", "Vassoura", "Rodo", "Pano de chão", "balde"]
-    print(lista[1]) 
-    """ não esqueça que o indice de uma lista sempre começa em 0 """
+    print(lista[1]) #não esqueça que o indice de uma lista sempre começa em 0
 
 #Exer 3
 elif (exer == 3):
@@ -53,12 +52,10 @@ elif (exer == 6):
 #Exer 7
 #Faça um programa que peça dois numeros, base e expoente, calcule e mostre o primeiros numero elevado ao segundo numero. Não utilize a função de potencia da linguagem.
 elif (exer == 7):
-    num = int(input("Digite o numero base: "))
+    res = num = int(input("Digite o numero base: "))
     expo = int(input("Digite o expoente: "))
-
-    #for i in range(expo):
-        
+    for i in range(expo - 1):
+        res = res * num
+    print(f"O número {num} elevado a {expo} é igual a {res}.")
 else: #FIM DO CODIGO
     print("Não tem esse exercicio")
-
-#Fazer tambem a aps dessa materia
