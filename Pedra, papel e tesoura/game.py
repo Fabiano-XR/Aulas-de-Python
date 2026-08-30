@@ -1,38 +1,43 @@
 import random
 lose = win = user = 0
 
-print ("!iniciar jogo!")
+print ("!Iniciar jogo!")
 print("Regras: digite pedra, papel ou tesoura (ou zero para encerrar o jogo.)")
-#def RandomChoise(user)
-    
 
-    
+def RandomChoise():
+    var = random.randint(1, 3)
+    if var == 1:
+        return "pedra"
+    elif var == 2:
+        return "tesoura"
+    elif var == 3:
+        return "papel"
 
 while user != "zero":
-    user = input("escolha: ")
-    maquina = random.randint(1, 3)
-    if user == "pedra" and maquina == 1:
+    user = input("escolha: ").lower()
+    if user != "pedra" or "papel" or "tesoura" or "zero":
+        print("Digite algo valido! \n (Pedra, papel, tesoura ou zero para encerrar.)")
+    machine = RandomChoise()
+    
+    if user == machine:
         print("Empate")
-    elif user == "tesoura" and maquina == 2:
-        print("Empate")
-    elif user == "papel" and maquina == 3:
-        print("Empate")
-    elif user == "pedra" and maquina == 3:
+
+    elif user == "pedra" and machine == "papel":
         print("Perdeu")
         lose += 1
-    elif user == "tesoura" and maquina == 1:
+    elif user == "tesoura" and machine == "pedra":
         print("Perdeu")
         lose += 1
-    elif user == "papel" and maquina == 2:
+    elif user == "papel" and machine == "tesoura":
         print("Perdeu")
         lose += 1
-    elif user == "pedra" and maquina == 2:
+    elif user == "pedra" and machine == "tesoura":
         print("Ganhou")
         win += 1
-    elif user == "tesoura" and maquina == 3:
+    elif user == "tesoura" and machine == "papel":
         print("Ganhou")
         win += 1
-    elif user == "papel" and maquina == 1:
+    elif user == "papel" and machine == "pedra":
         print("Ganhou")
         win += 1
 
